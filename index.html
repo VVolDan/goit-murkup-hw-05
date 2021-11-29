@@ -31,7 +31,7 @@
         <nav class="nav">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="./index.html" class="current nav-link">Студия</a>
+              <a href="./index.html" class="current nav-link studio">Студия</a>
             </li>
             <li class="nav-item">
               <a href="./portfolio.html" class="nav-link">Портфолио</a>
@@ -65,7 +65,18 @@
       <!-- Герой -->
       <section class="main-section">
         <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-        <button type="button" class="main-btn pointer">Заказать услугу</button>
+        <button type="button" data-modal-open class="main-btn pointer">
+          Заказать услугу
+        </button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <button type="button" data-modal-close class="close-btn">
+              <svg class="close-icon" width="11" height="11">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
       <!-- Преимущества работы с нами -->
       <section class="adventages section">
@@ -129,21 +140,36 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="doing-list">
             <li class="doing-item">
-              <img
-                src="./images/projectation.jpg"
-                alt="Проектирование сайтов"
-                width="370"
-              />
+              <div class="doing-box">
+                <img
+                  src="./images/projectation.jpg"
+                  alt="Проектирование сайтов"
+                  width="370"
+                />
+                <div class="description">
+                  <h3 class="description-title">Десктопные приложения</h3>
+                </div>
+              </div>
             </li>
             <li class="doing-item">
-              <img
-                src="./images/adaptation.jpg"
-                alt="Адаптация к мобильным приложениям"
-                width="370"
-              />
+              <div class="doing-box">
+                <img
+                  src="./images/adaptation.jpg"
+                  alt="Адаптация к мобильным приложениям"
+                  width="370"
+                />
+                <div class="description">
+                  <h3 class="description-title">Мобильные приложения</h3>
+                </div>
+              </div>
             </li>
             <li class="doing-item">
-              <img src="./images/design.jpg" alt="Оформление" width="370" />
+              <div class="doing-box">
+                <img src="./images/design.jpg" alt="Оформление" width="370" />
+                <div class="description">
+                  <h3 class="description-title">Дизайнерские решения</h3>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -450,5 +476,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
